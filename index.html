@@ -14,12 +14,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="preloader" role="status" aria-label="Loading Leytech portfolio">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/logo.jpeg" alt="Leytech" class="loader-mark" data-transparent-logo>
+      </div>
+      <p class="loader-tagline">Powering Possibilities</p>
+      <div class="loader-progress" aria-hidden="true"><span></span></div>
+      <span class="loader-label">Building your experience</span>
+    </div>
+  </div>
+
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="#home" aria-label="Leytech home">
         <img src="assets/logo.jpeg" alt="Leytech logo" class="brand-logo" data-transparent-logo>
+        <span class="brand-tagline">Powering possibilities</span>
       </a>
 
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -60,8 +72,7 @@
 
         <div class="hero-visual reveal">
           <div class="visual-frame">
-            <div class="tech-photo"></div>
-            <img src="assets/logo.jpeg" alt="Leytech logo" class="hero-logo" data-transparent-logo>
+            <img src="assets/profile.png" alt="Leytech, website developer" class="hero-profile">
             <div class="floating-card">
               <span class="status-dot"></span>
               <div><strong>Available for projects</strong><small>Let's create something valuable.</small></div>
@@ -99,6 +110,7 @@
           </div>
           <div class="about-visual reveal" aria-label="Technology business workspace">
             <div class="about-photo">
+              <img src="assets/team-working.jpg" alt="A team collaborating around laptops in their workspace">
               <div class="about-photo-card">
                 <small>TECH SERVICES</small>
                 <strong>Modern websites. Strong digital systems.</strong>
@@ -289,7 +301,7 @@
 
   <footer class="footer">
     <div class="container footer-main">
-      <div><a class="brand footer-brand" href="#home"><img src="assets/logo.jpeg" alt="Leytech logo" class="brand-logo footer-logo"></a><p>Building modern, responsive and professional websites for brands, businesses and individuals.</p></div>
+      <div><a class="brand footer-brand" href="#home"><img src="assets/logo.jpeg" alt="Leytech logo" class="brand-logo footer-logo"><span class="brand-tagline">Powering possibilities</span></a><p>Building modern, responsive and professional websites for brands, businesses and individuals.</p></div>
       <div class="footer-links"><div><small>EXPLORE</small><a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a></div><div><small>SOCIAL</small><a href="#" onclick="return false;">GitHub</a><a href="#" onclick="return false;">LinkedIn</a><a href="#" onclick="return false;">Instagram</a><a href="#" onclick="return false;">WhatsApp</a></div></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 Leytech. All Rights Reserved.</span><a href="#top">Back to top ↑</a></div>

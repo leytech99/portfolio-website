@@ -156,7 +156,23 @@ function closeModal(){modal.classList.remove("show");modal.setAttribute("aria-hi
 
 document.querySelector("#contactForm").addEventListener("submit",e=>{
   e.preventDefault();
+  const form=e.currentTarget;
   const note=document.querySelector("#formNote");
-  note.textContent="Your message form is ready. Connect this form to your preferred email or form service before publishing.";
-  e.target.reset();
+  const formData=new FormData(form);
+  const message=[
+    "New project enquiry",
+    `Name: ${formData.get("name")}`,
+    `Email: ${formData.get("email")}`,
+    `Project type: ${formData.get("type")}`,
+    `Message: ${formData.get("message")}`
+  ].join("\n");
+  const whatsappUrl=`https://wa.me/2348130242792?text=${encodeURIComponent(message)}`;
+  const whatsappWindow=window.open(whatsappUrl,"_blank");
+
+  if(whatsappWindow){
+    whatsappWindow.opener=null;
+    note.textContent="WhatsApp opened with your message. Tap Send in WhatsApp to deliver it.";
+  }else{
+    note.textContent="Your browser blocked the WhatsApp tab. Allow pop-ups for this site and try again.";
+  }
 });
