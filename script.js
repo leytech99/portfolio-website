@@ -166,7 +166,7 @@ document.querySelector("#contactForm").addEventListener("submit",e=>{
     `Project type: ${formData.get("type")}`,
     `Message: ${formData.get("message")}`
   ].join("\n");
-  const whatsappUrl=`https://wa.me/2348130242792?text=${encodeURIComponent(message)}`;
+  const whatsappUrl=`https://wa.me/2348028650688?text=${encodeURIComponent(message)}`;
   const whatsappWindow=window.open(whatsappUrl,"_blank");
 
   if(whatsappWindow){
